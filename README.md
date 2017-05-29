@@ -53,8 +53,7 @@ O Instagram BOT tem o objetivo de realizar a coleta de dados diários sobre post
     b) justifique!
 
 #### 5.3 DESCRIÇÃO DOS DADOS 
-    **USUARIOS** <br>
-    Tabela que armazena as informações relativas aos usuários do sistema.<br>
+    **USUARIOS:** Tabela que armazena as informações relativas aos usuários do sistema.<br>
     ID: campo do tipo inteiro auto incrementável que identifica unicamente um usuário.<br>
     NOME: campo do tipo VARCHAR, que armazena o nome do usuário.<br>
     SENHA: campo do tipo MD5 que armazena a senha de acesso do usuário.<br>
@@ -62,8 +61,7 @@ O Instagram BOT tem o objetivo de realizar a coleta de dados diários sobre post
     CRIADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da criação do usuário no sistema.<br>
     ATUALIZADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da última atualização do registro do usuário no sistema.<br>
 
-    **CONTA INSTAGRAM:** <br>
-    Tabela que armazena as informações de perfil do usuário assim que ele loga no sistema com a sua conta do Instagram.
+    **CONTA INSTAGRAM:** Tabela que armazena as informações de perfil do usuário assim que ele loga no sistema com a sua conta do Instagram.
     ID: campo do tipo inteiro auto incrementável que identifica unicamente um perfil do Instagram no sistema.<br>
     INSTAGRAM USERNAME: campo do tipo VARCHAR, que armazena o nome do perfil do usuário no Instagram.<br>
     INSTAGRAM FULLNAME: campo do tipo VARCHAR, que armazena o nome completo do perfil do usuário no Instagram.<br>
@@ -71,29 +69,27 @@ O Instagram BOT tem o objetivo de realizar a coleta de dados diários sobre post
     INSTAGRAM WEBSITE: campo do tipo VARCHAR, que armazena o endereço do website do usuário no Instagram.<br>
     INSTAGRAM API TOKEN: campo do tipo VARCHAR, que armazena a chave de acesso da API para consulta aos dados do Instagram.<br>
     INSTAGRAM PROFILE PICTURE: campo do tipo VARCHAR, que armazena a URL da imagems de perfil do usuário no Instagram.<br>
-    INSTAGRAM EMAIL CONTATO: campo do tipo VARCHAR, que armazena o endereço de email preferencial do usuário para eventuais contatos.<br>
+    INSTAGRAM EMAIL CONTATO: campo do tipo VARCHAR, que armazena o endereço de email preferencial do usuário para eventuais contatos.<br>
     CRIADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da criação do perfil do Instagram do usuário no sistema.<br>
-    ATUALIZADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da última atualização do perfil do Instagram do usuário no sistema.<br>
+    ATUALIZADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da última atualização do perfil do Instagram do           usuário no sistema.<br>
     
-    **BOT** <br>
-    Tabela que armazena as informações relativas aos robores que ficarão buscando informaçõe no Instagram.<br>
+    **BOT:** Tabela que armazena as informações relativas aos robores que ficarão buscando informaçõe no Instagram.<br>
     ID: campo do tipo inteiro auto incrementável que identifica unicamente um robô do sistema.<br>
     DATA INICIO EXECUCAO: campo do tipo TIMESTAMP que armazena a data/hora de início de execução do robô no sistema.<br>
     NOME: campo do tipo VARCHAR que armazena o nome do robô no sistema.<br>
     DESCRICAO: campo do tipo VARCHAR que armazena a descrição do robô no sistema.<br>
-    TEMPO EXECUCAO: campo do tipo inteiro que armazena a quantidade de horas que um robô está em situação igual a executando no sistema.<br>
-    QUANTIDADE PERFIS INSPECIONADOS: campo do tipo inteiro que armazena a quantidade de perfis do Instagram que foram inspecionados.<br>
-    SITUACAO: Campo VARCHAR que armazena a situação do robô. Possíveis situações: (EX) Em Execução | (PD) Parado | (FN) Finalizado | (FE) Finalizado com Erro
+    TEMPO EXECUCAO: campo do tipo inteiro que armazena a quantidade de horas que um robô está em situação igual a executando       no sistema.<br>
+    QUANTIDADE PERFIS INSPECIONADOS: campo do tipo inteiro que armazena a quantidade de perfis do Instagram que foram             inspecionados.<br>
+    SITUACAO: Campo VARCHAR que armazena a situação do robô. Possíveis situações: (EX) Em Execução | (PD) Parado | (FN)           Finalizado | (FE) Finalizado com Erro
     CRIADO EM: Campo do tipo TIMESTAMP que armazena o momento exato de criação do robô no sistema.<br>
     ATUALIZADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da última atualização do robô no sistema.<br>
     
-    **CONFIGURACOES** <br>
-    Tabela que armazena as configurações de execução dos robores.<br>
+    **CONFIGURACOES:** Tabela que armazena as configurações de execução dos robores.<br>
     ID: campo do tipo inteiro auto incrementável que identifica unicamente uma configuração de um robô do sistema.<br>
-    QUANTIDADE PERFIS PARADA: campo do tipo INTEIRO que armazena a quantidade de perfis a serem inspecionados até o momento de parada da execução do robô.<br>
-    TEMPO CICLO EXECUCAO: Campo do tipo inteiro que armazena a quantidade de minutos que o sistema deve aguardar após cada execução/busca no Instagram.<br>
+    QUANTIDADE PERFIS PARADA: campo do tipo INTEIRO que armazena a quantidade de perfis a serem inspecionados até o momento de     parada da execução do robô.<br>
+    TEMPO CICLO EXECUCAO: Campo do tipo inteiro que armazena a quantidade de minutos que o sistema deve aguardar após cada         execução/busca no Instagram.<br>
     CRIADO EM: Campo do tipo TIMESTAMP que armazena o momento exato de criação da configuração do robô no sistema.<br>
-    ATUALIZADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da última atualização da configuração do robô no sistema.<br>
+    ATUALIZADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da última atualização da configuração do robô no           sistema.<br>
     
 ### 6	MODELO LÓGICO<br>
 ### 7	MODELO FÍSICO<br>
