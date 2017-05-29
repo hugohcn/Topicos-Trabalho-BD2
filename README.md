@@ -61,7 +61,8 @@ O Instagram BOT tem o objetivo de realizar a coleta de dados diários sobre post
     CRIADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da criação do usuário no sistema.<br>
     ATUALIZADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da última atualização do registro do usuário no sistema.<br>
 
-    **CONTA INSTAGRAM:** Tabela que armazena as informações de perfil do usuário assim que ele loga no sistema com a sua conta do Instagram.
+    **CONTA INSTAGRAM:** 
+    Tabela que armazena as informações de perfil do usuário assim que ele loga no sistema com a sua conta do Instagram.
     ID: campo do tipo inteiro auto incrementável que identifica unicamente um perfil do Instagram no sistema.<br>
     INSTAGRAM USERNAME: campo do tipo VARCHAR, que armazena o nome do perfil do usuário no Instagram.<br>
     INSTAGRAM FULLNAME: campo do tipo VARCHAR, que armazena o nome completo do perfil do usuário no Instagram.<br>
@@ -73,7 +74,8 @@ O Instagram BOT tem o objetivo de realizar a coleta de dados diários sobre post
     CRIADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da criação do perfil do Instagram do usuário no sistema.<br>
     ATUALIZADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da última atualização do perfil do Instagram do           usuário no sistema.<br>
     
-    **BOT:** Tabela que armazena as informações relativas aos robores que ficarão buscando informaçõe no Instagram.<br>
+    **BOT:**
+    Tabela que armazena as informações relativas aos robores que ficarão buscando informaçõe no Instagram.<br>
     ID: campo do tipo inteiro auto incrementável que identifica unicamente um robô do sistema.<br>
     DATA INICIO EXECUCAO: campo do tipo TIMESTAMP que armazena a data/hora de início de execução do robô no sistema.<br>
     NOME: campo do tipo VARCHAR que armazena o nome do robô no sistema.<br>
@@ -84,15 +86,43 @@ O Instagram BOT tem o objetivo de realizar a coleta de dados diários sobre post
     CRIADO EM: Campo do tipo TIMESTAMP que armazena o momento exato de criação do robô no sistema.<br>
     ATUALIZADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da última atualização do robô no sistema.<br>
     
-    **CONFIGURACOES:** Tabela que armazena as configurações de execução dos robores.<br>
+    **CONFIGURACOES:** Tabela que armazena as configurações de execução dos robores.
     ID: campo do tipo inteiro auto incrementável que identifica unicamente uma configuração de um robô do sistema.<br>
     QUANTIDADE PERFIS PARADA: campo do tipo INTEIRO que armazena a quantidade de perfis a serem inspecionados até o momento de     parada da execução do robô.<br>
     TEMPO CICLO EXECUCAO: Campo do tipo inteiro que armazena a quantidade de minutos que o sistema deve aguardar após cada         execução/busca no Instagram.<br>
     CRIADO EM: Campo do tipo TIMESTAMP que armazena o momento exato de criação da configuração do robô no sistema.<br>
     ATUALIZADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da última atualização da configuração do robô no           sistema.<br>
     
+    **HASHTAGSBUSCA:** 
+    Tabela que armazena as as hashtags definidas nas configurações de cada robô.
+    ID: campo do tipo inteiro auto incrementável que identifica unicamente uma hashtag a ser buscada por um robô.<br>
+    HASHTAG: campo do tipo VARCHAR, que armazena a hashtag a ser buscada.<br>
+    CRIADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da criação da hashtag para a configuração do robô.<br>
+    ATUALIZADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da atualização da hashtag para a configuração do robô.<br>
+    
+    **INDICES:** 
+    Tabela que armazena os indicadores pesquisados pelos robôs para cada hashtag configurada, por dia.<br>
+    ID: campo do tipo INTEIRO auto incrementável que identifica unicamente um indicador (para uma hashtag) a ser buscada/processada por um robô.<br>
+    HASHTAG: campo do tipo VARCHAR, que armazena a hashtag que fora processada.<br>
+    DATA ANALISE: Campo do tipo DATE que armazena a data de processamento das informações buscadas/processadas pelo robô.<br>
+    QUANTIDADE LIKES: Campo do tipo INTEIRO que armazena a quantidade de likes totais recebidas por uma hashtag.<br>
+    QUANTIDADE IMAGENS: Campo do tipo INTEIRO que armazena a quantidade de imagens totais processadas para uma hashtag.<br>
+    QUANTIDADE VIDEOS: Campo do tipo INTEIRO que armazena a quantidade de vídeos totais processados para uma hashtag.<br>
+    CRIADO EM: Campo do tipo TIMESTAMP que armazena o momento exato de criação do índice no sistema.<br>
+    ATUALIZADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da atualização do índice no sistema.<br>
+    
+    **INDICES RELACINADOS:** 
+    Tabela que armazena os indicadores relacionados com cada índice processado pelo robô.<br>
+    ID: campo do tipo INTEIRO auto incrementável que identifica unicamente um indicador relacionado para uma hashtag processada.<br>
+    HASHTAG: campo do tipo VARCHAR, que armazena a hashtag que fora relacionada no processamento do robô.<br>
+    CRIADO EM: Campo do tipo TIMESTAMP que armazena o momento exato de criação do índice relacionado com a hashtag processada no sistema.<br>
+    ATUALIZADO EM: Campo do tipo TIMESTAMP que armazena o momento exato da atualização do índice no sistema.<br>
+    
 ### 6	MODELO LÓGICO<br>
+![Alt text](https://github.com/hugohcn/Topicos-Trabalho-BD2/blob/master/Modelo%20Lo%CC%81gico%20-%20Instagram%20Bot.png "Modelo Lógico")<br>
+
 ### 7	MODELO FÍSICO<br>
+
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
         Detalhamento sobre as informações e processo de obtenção ou geração dos dados.
